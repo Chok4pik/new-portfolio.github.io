@@ -1,0 +1,532 @@
+/* General Styles */
+:root {
+    --primary-color: #0d6efd;
+    --dark-bg: #1a1f2e;
+    --darker-bg: #151821;
+    --light-bg: #f8f9fa;
+    --pop-purple : #c2c2e4;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    
+    
+  }
+  
+  .section-padding {
+    padding: 6rem 0;
+  }
+
+  .text-justify {
+    text-align: justify; /* Justifie le texte */
+}
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+/* Hero Section */
+.hero-section {
+  min-height: 80vh;
+  background: url('assets/img/ice.webp') no-repeat center center/cover;
+  padding-top: 76px; /* Hauteur de la navbar + padding */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card style for text in Hero section */
+.hero-card {
+  background:rgba(193, 192, 231, 0.7); /* Fond plus sombre */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgb(250, 250, 250);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem; /* Taille du texte */
+  font-weight: bold;
+  background-image: linear-gradient(45deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Rendre le texte transparent pour montrer le dégradé */
+  background-clip: text;
+}
+
+
+.hero-card h2 {
+  color: #6f6f75; /* Même couleur or */
+}
+
+.hero-card p {
+  color: #000000; /* Gris clair */
+}
+
+/* Bouton plus visible */
+.hero-card a.btn {
+  color: #333; /* Couleur de texte foncé */
+  background-color: #afcff8; /* Or pour correspondre au texte */
+  border-color: #afcff8; /* Même couleur de bordure */
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-card a.btn:hover {
+  background-color:#fee3e0; /* Couleur or légèrement plus vive au survol */
+  color: #111; /* Texte encore plus foncé */
+}
+
+.profile-img {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto 20px;
+  border: 4px solid #fee3e0;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  box-shadow: 0 0 20px rgb(201, 115, 252), 0 0 40px rgb(212, 120, 182), 0 0 60px rgb(231, 113, 192);
+  transform: scale(1.05);
+}
+
+/* about me  */
+
+#about {
+  padding: 60px 0;
+  background: var(--pop-purple
+  );
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #6610f2;
+  border-color: #6610f2;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #520dc2;
+  border-color: #520dc2;
+}
+
+  
+  /* Section */
+.section-padding {
+    padding: 60px 0;
+}
+
+/* Card styling */
+/* Styles pour la carte avec effet de retournement */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 500px; /* Ajuster la taille max si nécessaire */
+  height: 510px; /* Ajuster la hauteur si nécessaire */
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Ajout de padding pour un espacement cohérent */
+}
+
+.flip-card-front {
+  background-color:  #dabdeb; /* Couleur de fond de la face avant */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.flip-card-back {
+  background-color: #f8f9fa; /* Couleur de fond de la face arrière */
+  color: #000000;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Card title */
+.card-title {
+    font-size: 1.25rem;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+/* Adjusting card text */
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Text alignment and spacing for lead paragraph */
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+  
+  /* Navigation */
+  .navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(26, 31, 46, 0.9) !important;
+  }
+  
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .btn-outline-primary {
+    border-width: 2px;
+  }
+  
+  /* Form Controls */
+  .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+  
+  /* Badges */
+  .badge {
+    padding: 0.5em 1em;
+    font-weight: 500;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .card, .section-padding > * {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .section-padding {
+        padding: 4rem 0;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+  }
+
+  /* compétences */
+
+
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline-dot i {
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.timeline-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card h4 {
+    color: #1a202c;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .timeline-container::before {
+        left: 2rem;
+    }
+    
+    .timeline-item {
+        padding-left: 5rem;
+    }
+    
+    .timeline-dot {
+        left: 0.75rem;
+    }
+}
+
+/* Animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation delay for items */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* General styles */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1a202c;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.text-primary {
+    color: #3b82f6 !important;
+}
+
+.bg-light {
+    background-color: #f8fafc !important;
+}
+
+  /* compétences */
+
+
+  .skills-section {
+    min-height: 60vh;
+    padding: 5rem 0;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    background: #e7f1ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.skill-icon i {
+    font-size: 24px;
+    color: #0d6efd;
+}
+
+.skill-title {
+    color: #0d6efd;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.skill-list li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.skill-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.skill-card.active .skill-content {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+.page-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: #0d6efd;
+    border-radius: 2px;
+}
