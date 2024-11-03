@@ -21,9 +21,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Accueil</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">À propos de moi</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            À propos de moi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#presentation">Mon parcours</a></li>
+                            <li><a class="dropdown-item" href="#competences">Mes compétences</a></li>
+                            <li><a class="dropdown-item" href="#parcours">Formation et expérience</a></li>
+                        </ul>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#bts-sio">BTS SIO</a>
                     </li>
@@ -55,7 +63,7 @@
                         <p class="lead mb-5"> 
                             Hey guys bienvenue dans mon Portfolio !!!
                         </p>
-                        <a href="#about" class="btn btn-outline-primary btn-lg">
+                        <a href="#presentation" class="btn btn-outline-primary btn-lg">
                             Découvrir <i class="bi bi-arrow-down ms-2"></i>
                         </a>
                     </div>
@@ -67,7 +75,7 @@
     
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-light">
+    <section id="presentation" class="section-padding bg-light">
         <div class="container">
             <h2 class="text-center mb-5">À Propos de Moi</h2>
             <div class="row justify-content-center">
@@ -84,9 +92,9 @@
 
 
         <!-- Compétences -->
-    <div class="skills-section ">
+    <div class="skills-section " id="competences">
         <div class="container">
-            <h1 class="text-center page-title mb-5">Mes Compétences</h1>
+            <h1 class="text-center mb-5">Mes compétences</h1>
             
             <div class="row g-4">
                 <!-- Langages de programmation -->
@@ -208,9 +216,9 @@
 
     <!-- expériences -->
          <!-- Timeline Section -->
-    <section id="timeline" class="section-padding bg-light">
+    <section id="parcours" class="section-padding bg-light" >
         <div class="container">
-            <h2 class="text-center mb-5">Parcours</h2>
+            <h2 class="text-center mb-5">Formation et expérience</h2>
             
             <div class="row">
                 <!-- Academic Timeline -->

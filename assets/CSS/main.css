@@ -229,11 +229,7 @@
     backdrop-filter: blur(10px);
     background-color: rgba(26, 31, 46, 0.9) !important;
   }
-  
-  .nav-link {
-    position: relative;
-    padding: 0.5rem 1rem;
-  }
+
   
   .nav-link::after {
     content: '';
@@ -247,10 +243,21 @@
     transform: translateX(-50%);
   }
   
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 100%;
+
+  .dropdown-toggle::after {
+    content: none;
   }
+  
+  .nav-link {
+      text-decoration: none; /* Enlever la décoration si besoin */
+      border-bottom: 2px solid transparent; /* Ajuster l'épaisseur et la couleur */
+      
+  }
+  
+  .nav-link:hover, .nav-link.active {
+      border-bottom: 2px solid #00aaff; /* Ajuster la couleur lors du survol ou lorsque l'élément est actif */
+  }
+  
   
   /* Buttons */
   .btn {
@@ -530,3 +537,4 @@ h3 {
     background: #0d6efd;
     border-radius: 2px;
 }
+
