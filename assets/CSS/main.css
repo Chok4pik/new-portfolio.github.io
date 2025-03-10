@@ -32,8 +32,8 @@
   
 /* Hero Section */
 .hero-section {
-  min-height: 80vh;
-  background: url(../img/nasa.jpg) no-repeat center center/cover;
+  min-height: 100vh;
+  background: url(../img/sky-with-clouds-background.jpg) no-repeat center center/cover;
   padding-top: 76px; /* Hauteur de la navbar + padding */
   position: relative;
   overflow: hidden;
@@ -63,7 +63,7 @@
   border-radius: 15px;
   box-shadow: 0 8px 16px rgb(250, 250, 250);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 .hero-card h1 {
@@ -77,17 +77,18 @@
 
 
 .hero-card h2 {
-  color: #6f6f75; /* Même couleur or */
+  color: #000000; /* Même couleur or */
 }
 
 .hero-card p {
   color: #000000; /* Gris clair */
+  font-size: 1.5rem;
 }
 
 /* Bouton plus visible */
 .hero-card a.btn {
-  color: #333; /* Couleur de texte foncé */
-  background-color: #afcff8; /* Or pour correspondre au texte */
+  color: #080808; /* Couleur de texte foncé */
+  background-color: #59a6ee; /* Or pour correspondre au texte */
   border-color: #afcff8; /* Même couleur de bordure */
   font-weight: bold;
   padding: 10px 20px;
